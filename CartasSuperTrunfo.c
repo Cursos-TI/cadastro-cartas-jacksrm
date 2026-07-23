@@ -7,13 +7,15 @@
 int main()
 {
   // Criando as variáveis para armazenar os dados das cartas
-  char state;
-  char code[3];
-  char city[20];
-  int population;
-  float area;
-  float gdp;
-  int touristic_spots;
+  char state;          // = 'A';
+  char code[3];        // = "01";
+  char city[20];       // = "São Paulo";
+  int population;      // = 12325000;
+  float area;          // = 1521.11;
+  double gdp;          // = 699.28;
+  int touristic_spots; // = 50;
+  float pop_density;
+  float gdp_per_capita;
 
   // Coletando dados para a primeira carta
   printf("### First Card ###\n");
@@ -32,15 +34,21 @@ int main()
   printf("Enter the number of touristic spots: ");
   scanf(" %d", &touristic_spots);
 
+  gdp *= 1e9; // Convertendo o PIB de bilhões para unidades monetárias
+  pop_density = (float)population / area;
+  gdp_per_capita = gdp / (float)population;
+
   // Exibindo os dados da primeira carta
   printf("\n--- Card 01 ---\n");
   printf("State: %c\n", state);
-  printf("State Code: %s\n", code);
+  printf("State Code: %s\n", state + code);
   printf("City: %s\n", city);
   printf("Population: %d\n", population);
   printf("Area: %.2f km²\n", area);
   printf("GDP: %.2f billion\n", gdp);
   printf("Touristic Spots: %d\n", touristic_spots);
+  printf("Population Density: %.2f people/km²\n", pop_density);
+  printf("GDP per capita: %.2f\n R$", gdp_per_capita);
 
   // Coletando dados para a segunda carta
   printf("### Second Card ###\n");
@@ -59,15 +67,22 @@ int main()
   printf("Enter the number of touristic spots: ");
   scanf(" %d", &touristic_spots);
 
+  gdp *= 1e9; // Convertendo o PIB de bilhões para unidades monetárias
+  pop_density = (float)population / area;
+  gdp_per_capita = gdp / (float)population;
+
   // Exibindo os dados da segunda carta
+  printf("\n\n");
   printf("\n--- Card 02 ---\n");
-  printf("State: %c\n", state);
+  printf("State: %c\n", state + code);
   printf("State Code: %s\n", code);
   printf("City: %s\n", city);
   printf("Population: %d\n", population);
   printf("Area: %.2f km²\n", area);
   printf("GDP: %.2f billion\n", gdp);
   printf("Touristic Spots: %d\n", touristic_spots);
+  printf("Population Density: %.2f people/km²\n", pop_density);
+  printf("GDP per capita: %.2f\n R$", gdp_per_capita);
 
   return 0;
 }
