@@ -101,100 +101,110 @@ int main()
   printf("GDP per capita: %.2f R$\n", gdp_per_capitaB);
   printf("Super Power: %.2f\n", super_powerB);
 
-  int count_win_A = 0;
-  int count_win_B = 0;
+  int option;
 
-  // Comparando as cartas
-  printf("\n\n");
-  printf("Comparison of Cards:\n");
+  printf("### Choose which property to compare: ###\n");
+  printf("###       Comparing: %c%s vs %c%s       ###\n", stateA, codeA, stateB, codeB);
+  printf("1. Population\n");
+  printf("2. Area (km²)\n");
+  printf("3. GDP\n");
+  printf("4. Touristic Spots\n");
+  printf("5. Population Density (people/km²)\n");
+  printf("6. GDP per capita\n");
+  printf("7. Super Power\n");
+  printf("Option: ");
+  scanf("%d", &option);
 
-  // Comparando População
-  if (populationA > populationB)
+  switch (option)
   {
-    count_win_A++;
-    printf("Population: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("Population: City %s Wins\n", cityB);
-    count_win_B++;
+  case 1:
+    // Comparando População
+    if (populationA > populationB)
+    {
+      printf("Population: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("Population: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 2:
+    // Comparando Área
+    if (areaA > areaB)
+    {
+      printf("Area: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("Area: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 3:
+    // Comparando PIB
+    if (gdpA > gdpB)
+    {
+      printf("GDP: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("GDP: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 4:
+    // Comparando Número de Pontos Turísticos
+    if (touristic_spotsA > touristic_spotsB)
+    {
+      printf("Touristic Spots: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("Touristic Spots: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 5:
+    // Comparando Densidade Populacional
+    if (pop_densityA < pop_densityB)
+    {
+      printf("Population Density: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("Population Density: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 6:
+    // Comparando GDP per capita
+    if (gdp_per_capitaA > gdp_per_capitaB)
+    {
+      printf("GDP per capita: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("GDP per capita: City %s Wins\n", cityB);
+    }
+    break;
+
+  case 7:
+    // Comparando Super Power
+    if (super_powerA > super_powerB)
+    {
+      printf("Super Power: City %s Wins\n", cityA);
+    }
+    else
+    {
+      printf("Super Power: City %s Wins\n", cityB);
+    }
+    break;
+
+  default:
+    printf("Invalid option!");
+    break;
   }
 
-  // Comparando Área
-  if (areaA > areaB)
-  {
-    count_win_A++;
-    printf("Area: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("Area: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Comparando PIB
-  if (gdpA > gdpB)
-  {
-    count_win_A++;
-    printf("GDP: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("GDP: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Comparando Número de Pontos Turísticos
-  if (touristic_spotsA > touristic_spotsB)
-  {
-    count_win_A++;
-    printf("Touristic Spots: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("Touristic Spots: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Comparando Densidade Populacional
-  if (pop_densityA < pop_densityB)
-  {
-    count_win_A++;
-    printf("Population Density: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("Population Density: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Comparando GDP per capita
-  if (gdp_per_capitaA > gdp_per_capitaB)
-  {
-    count_win_A++;
-    printf("GDP per capita: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("GDP per capita: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Comparando Super Power
-  if (super_powerA > super_powerB)
-  {
-    count_win_A++;
-    printf("Super Power: City %s Wins\n", cityA);
-  }
-  else
-  {
-    printf("Super Power: City %s Wins\n", cityB);
-    count_win_B++;
-  }
-
-  // Exibindo o resultado final
-  printf("\nFinal Result:\n");
-  printf("City %s won %d times.\n", cityA, count_win_A);
-  printf("City %s won %d times.\n", cityB, count_win_B);
   return 0;
 }
