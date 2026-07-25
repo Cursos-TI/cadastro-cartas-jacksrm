@@ -2,11 +2,11 @@ BasedOnStyle: LLVM
 UseTab: Never
 IndentWidth: 4
 ColumnLimit: 80
-BreakBeforeBraces: Linux
-AlignAfterOpenBracket: DontAlign
+BreakBeforeBraces: Attach
+AlignAfterOpenBracket: BlockIndent
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
-ContinuationIndentWidth: 4
-SpaceAfterCStyleCast: true
 BinPackArguments: false
 BinPackParameters: false
+ContinuationIndentWidth: 4
+SpaceAfterCStyleCast: true

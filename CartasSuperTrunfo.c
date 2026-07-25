@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     // Cidade A
     char stateA = 'A';
     char codeA[3] = "01";
@@ -100,11 +99,13 @@ int main()
     float totalA = 0, totalB = 0;
 
     printf("\n### Choose 2 properties to compare: ###\n");
-    printf("###      Comparing: %c%s vs %c%s      ###\n",
+    printf(
+        "###      Comparing: %c%s vs %c%s      ###\n",
         stateA,
         codeA,
         stateB,
-        codeB);
+        codeB
+    );
     printf("-> Option 1\n");
     printf("1. Population\n");
     printf("2. Area (km²)\n");
@@ -135,8 +136,10 @@ int main()
     switch (option1) {
     case 1:
         // Comparando População
-        printf("In Population: %s City Wins\n",
-            populationA > populationB ? cityA : cityB);
+        printf(
+            "In Population: %s City Wins\n",
+            populationA > populationB ? cityA : cityB
+        );
         totalA += populationA;
         totalB += populationB;
         break;
@@ -157,24 +160,30 @@ int main()
 
     case 4:
         // Comparando Número de Pontos Turísticos
-        printf("In Touristic Spots: %s City Wins\n",
-            touristic_spotsA > touristic_spotsB ? cityA : cityB);
+        printf(
+            "In Touristic Spots: %s City Wins\n",
+            touristic_spotsA > touristic_spotsB ? cityA : cityB
+        );
         totalA += touristic_spotsA;
         totalB += touristic_spotsB;
         break;
 
     case 5:
         // Comparando Densidade Populacional
-        printf("In Population Density: %s City Wins\n",
-            pop_densityA < pop_densityB ? cityA : cityB);
+        printf(
+            "In Population Density: %s City Wins\n",
+            pop_densityA < pop_densityB ? cityA : cityB
+        );
         totalA += pop_densityA;
         totalB += pop_densityB;
         break;
 
     case 6:
         // Comparando GDP per capita
-        printf("In GDP per capita: %s City Wins\n",
-            gdp_per_capitaA > gdp_per_capitaB ? cityA : cityB);
+        printf(
+            "In GDP per capita: %s City Wins\n",
+            gdp_per_capitaA > gdp_per_capitaB ? cityA : cityB
+        );
         totalA += gdp_per_capitaA;
         totalB += gdp_per_capitaB;
         break;
@@ -188,8 +197,10 @@ int main()
     switch (option2) {
     case 1:
         // Comparando População
-        printf("In Population: %s City Wins\n",
-            populationA > populationB ? cityA : cityB);
+        printf(
+            "In Population: %s City Wins\n",
+            populationA > populationB ? cityA : cityB
+        );
         totalA += populationA;
         totalB += populationB;
         break;
@@ -210,24 +221,30 @@ int main()
 
     case 4:
         // Comparando Número de Pontos Turísticos
-        printf("In Touristic Spots: %s City Wins\n",
-            touristic_spotsA > touristic_spotsB ? cityA : cityB);
+        printf(
+            "In Touristic Spots: %s City Wins\n",
+            touristic_spotsA > touristic_spotsB ? cityA : cityB
+        );
         totalA += touristic_spotsA;
         totalB += touristic_spotsB;
         break;
 
     case 5:
         // Comparando Densidade Populacional
-        printf("In Population Density: %s City Wins\n",
-            pop_densityA < pop_densityB ? cityA : cityB);
+        printf(
+            "In Population Density: %s City Wins\n",
+            pop_densityA < pop_densityB ? cityA : cityB
+        );
         totalA += pop_densityA;
         totalB += pop_densityB;
         break;
 
     case 6:
         // Comparando GDP per capita
-        printf("In GDP per capita: %s City Wins\n",
-            gdp_per_capitaA > gdp_per_capitaB ? cityA : cityB);
+        printf(
+            "In GDP per capita: %s City Wins\n",
+            gdp_per_capitaA > gdp_per_capitaB ? cityA : cityB
+        );
         totalA += gdp_per_capitaA;
         totalB += gdp_per_capitaB;
         break;
